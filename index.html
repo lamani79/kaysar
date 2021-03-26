@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kaysar</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
@@ -41,13 +43,44 @@
             <nav class="body_nav">
                 <div class="links">
                     <ul>
-                        <li><a href="#">encryption</a></li>
-                        <li><a href="#">Decrypt</a></li>
-                        <li><a href="#">about this algo</a></li>
+                        <li><a id="encryption_but" href="#">encryption</a></li>
+                        <li><a id="decrypt_but" href="#">Decryption</a></li>
+                        <li><a id="about_algo_but" href="#">about this algo</a></li>
 
                     </ul>
                 </div>
             </nav>
+
+            <div class="frame_content">
+                <div class="frame_item" id="encryption_frame">
+
+                    <div class="container">
+                        <button class="convert_but">encryption now</button>
+
+                        <form>
+                            <label>key number: </label>
+                            <input type="text" placeholder="key">
+                        </form>
+
+                        <div class="cripto_container">
+                            <div id="text_befor" class="text_item">
+                                <textarea class="text_input" name="text_befor" id="text_befor_input" cols="30"
+                                    rows="10"></textarea>
+                            </div>
+                            <div id="text_after" class="text_item">
+                                <p class="text_input" id="text_after">
+                                    gjgjh
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="frame_item" id="decryption_frame">decryption_frame</div>
+                <div class="frame_item" id="about_algo_frame">decryption_frame</div>
+
+            </div>
 
 
             <!-- <div class="key_number">

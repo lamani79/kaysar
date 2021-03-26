@@ -11,12 +11,35 @@
 
 body {
   background-color: #0C3040;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 .container {
   width: 80%;
   margin: 0 auto;
+}
+
+.links ul {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.links ul li {
+  display: inline-block;
+  position: relative;
+}
+
+.links ul a {
+  text-transform: capitalize;
+  color: #51D73C;
+  padding: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.title_section, .convert_but {
+  font-family: 'Righteous', cursive;
+  letter-spacing: 2px;
 }
 
 #main_nav {
@@ -55,23 +78,7 @@ body {
   height: 100%;
 }
 
-#main_nav .links ul {
-  list-style: none;
-  margin: 0 10px;
-}
-
-#main_nav .links ul li {
-  display: inline-block;
-  position: relative;
-}
-
-#main_nav .links ul a {
-  text-transform: capitalize;
-  color: #51D73C;
-  padding: 10px;
-}
-
-#main_nav .links ul a::after {
+#main_nav .links ul li a::after {
   content: "";
   z-index: 99;
   position: absolute;
@@ -84,7 +91,7 @@ body {
   transition: width .3s;
 }
 
-#main_nav .links ul a:hover::after {
+#main_nav .links ul li a:hover::after {
   width: 100%;
 }
 
@@ -137,5 +144,116 @@ body {
   height: 25px;
   text-align: center;
   font-size: large;
+}
+
+#main_body .body_nav {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#main_body .body_nav .links ul li a:hover {
+  color: #227443;
+}
+
+#main_body .frame_content {
+  margin-top: 30px;
+  border: 2px solid #227443;
+  height: 60vh;
+}
+
+#main_body .frame_content .frame_item {
+  width: 100%;
+  height: 100%;
+}
+
+#main_body .frame_content #encryption_frame {
+  display: block;
+}
+
+#main_body .frame_content #encryption_frame .container {
+  margin: 20px auto;
+}
+
+#main_body .frame_content #encryption_frame label {
+  color: #227443;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+#main_body .frame_content #encryption_frame input {
+  padding: 5px;
+  color: #51D73C;
+  border: 1px solid #51D73C;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: #043444;
+  outline: none;
+  font-size: large;
+}
+
+#main_body .frame_content #encryption_frame .convert_but {
+  width: 150px;
+  height: 50px;
+  background-color: #51D73C;
+  color: #0C3040;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: larger;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: block;
+  margin: 10px auto;
+}
+
+#main_body .frame_content #encryption_frame .convert_but:hover {
+  color: #51D73C;
+  border: 1px solid #51D73C;
+  background-color: #043444;
+}
+
+#main_body .frame_content #encryption_frame .cripto_container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  margin-top: 30px;
+}
+
+#main_body .frame_content #encryption_frame .cripto_container .text_item {
+  min-height: 200px;
+  border: 1px solid #51D73C;
+  border-radius: 5px;
+  background-color: #043444;
+}
+
+#main_body .frame_content #encryption_frame .cripto_container .text_input {
+  padding: 20px;
+  border: 0px;
+  width: 100%;
+  height: 100%;
+  color: #51D73C;
+  font-family: "Roboto", sans-serif;
+  background-color: #043444;
+}
+
+#main_body .frame_content #encryption_frame .cripto_container .text_input:focus {
+  outline: none;
+}
+
+#main_body .frame_content #encryption_frame .cripto_container #text_after {
+  font-size: small;
+}
+
+#main_body .frame_content #decryption_frame {
+  background-color: blue;
+  display: none;
+}
+
+#main_body .frame_content #about_algo_frame {
+  background-color: goldenrod;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

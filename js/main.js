@@ -36,3 +36,35 @@ text_aftter:${cripto_text}`);
 
 
 chifre(normal_text, 3);
+
+// ##################################
+//  for body nav button:
+let encryption_frame = document.getElementById("encryption_frame");
+let decryption_frame = document.getElementById("decryption_frame");
+let about_algo_frame = document.getElementById("about_algo_frame");
+
+let encryption_but = document.getElementById("encryption_but");
+let decrypt_but = document.getElementById("decrypt_but");
+let about_algo_but = document.getElementById("about_algo_but");
+
+encryption_but.onclick = function (doom) {
+    encryption_frame.style.display = "block";
+    decryption_frame.style.display = "none";
+    about_algo_frame.style.display = "none";
+
+};
+decrypt_but.onclick = function (doom) {
+    encryption_frame.style.display = "none";
+    decryption_frame.style.display = "block";
+    about_algo_frame.style.display = "none";
+
+};
+about_algo_but.onclick = function (doom) {
+    encryption_frame.style.display = "none";
+    decryption_frame.style.display = "none";
+    about_algo_frame.style.display = "block";
+
+};
+
+
+
