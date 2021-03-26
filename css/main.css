@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #0C3040;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#main_nav {
+  background-color: #043444;
+  height: 70px;
+  width: 100%;
+}
+
+#main_nav .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main_nav .logo {
+  height: 70px;
+}
+
+#main_nav .logo a {
+  display: block;
+  height: 100%;
+}
+
+#main_nav .logo a img {
+  width: 100%;
+  height: 100%;
+}
+
+#main_nav .links ul {
+  list-style: none;
+  margin: 0 10px;
+}
+
+#main_nav .links ul li {
+  display: inline-block;
+  position: relative;
+}
+
+#main_nav .links ul a {
+  text-transform: capitalize;
+  color: #51D73C;
+  padding: 10px;
+}
+
+#main_nav .links ul a::after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 0%;
+  height: 2px;
+  background-color: #227443;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+#main_nav .links ul a:hover::after {
+  width: 100%;
+}
+
+#main_body {
+  margin-top: 20px;
+}
+
+#main_body .title_section {
+  text-align: center;
+}
+
+#main_body .title {
+  display: inline-block;
+  color: #51D73C;
+  position: relative;
+}
+
+#main_body .title::after {
+  position: absolute;
+  content: "";
+  z-index: 99;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #227443;
+  -webkit-transform: scaleX(0.4);
+          transform: scaleX(0.4);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+#main_body .title:hover::after {
+  -webkit-transform: scaleX(0.7);
+          transform: scaleX(0.7);
+}
+
+#main_body .key_number .key_lable {
+  color: #227443;
+}
+
+#main_body .key_number .key_input {
+  background-color: #043444;
+  color: #51D73C;
+  border: 2px solid #227443;
+  border-radius: 5px;
+  width: 120px;
+  height: 25px;
+  text-align: center;
+  font-size: large;
+}
+/*# sourceMappingURL=main.css.map */
