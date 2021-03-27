@@ -4,7 +4,7 @@ add_more_char = add_more_char.split('');
 alphabet = alphabet.concat(add_more_char);
 console.log(alphabet);
 
-let normal_text = "+";
+// let normal_text = "+";
 const alphabet_size = alphabet.length;
 
 function chifre(text, key) {
@@ -27,15 +27,76 @@ function chifre(text, key) {
 
 
     }
-    console.log(`text before: ${normal_text}
-text_aftter:${cripto_text}`);
+    return cripto_text;
 
 
 
 };
 
 
-chifre(normal_text, 3);
+
+
+
+
+
+
+let krypt_but = document.getElementById("crypt_but");
+
+let copy_but = document.getElementById("copy_but");
+let krypted_text = document.getElementById("text_after");
+
+
+function copy_text() {
+
+
+
+
+
+    // creat the input :
+    let input_to_copy = document.createElement("input");
+
+    // get value from p to input
+    input_to_copy.value = krypted_text.textContent;
+    console.log(input_to_copy.value);
+    document.body.appendChild(input_to_copy);
+    /* Select the text field */
+    input_to_copy.select();
+    input_to_copy.setSelectionRange(0, 99999); /* For mobile devices */
+
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+    // then remove input
+    input_to_copy.remove();
+
+
+}
+copy_but.onclick = copy_text;
+
+
+
+krypt_but.onclick = function () {
+    let key_value = document.getElementById("key_value").value;
+    let normal_text_input_value = document.getElementById("text_before_input").value;
+
+
+    krypted_text.innerText = chifre(text = normal_text_input_value, key = key_value);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ##################################
 //  for body nav button:
@@ -66,5 +127,6 @@ about_algo_but.onclick = function (doom) {
 
 };
 
+// ##################################
 
 

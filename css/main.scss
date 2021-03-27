@@ -5,6 +5,9 @@ $main_color: #51D73C;
 $second_color: #227443;
 $roboto: 'Roboto', sans-serif;
 
+.icon-file_copy:before {
+    content: "\e900";
+  }
 
 *{
     margin: 0;
@@ -17,7 +20,11 @@ $roboto: 'Roboto', sans-serif;
 body{
    background-color: $backgound_color;
    font-family: $roboto;
+   
 
+}
+textarea{
+    resize: none;
 }
 
 .container{
@@ -67,9 +74,11 @@ body{
     }
     .logo{
         height: 70px;
+
         a{
             display: block;
             height: 100%;
+            width: 70%;
             img{
                 width: 100%;
                 height: 100%;
@@ -100,7 +109,9 @@ body{
 }
 #main_body{
     margin-top: 20px;
-    .container{}
+    .container{
+        width: 70%;
+    }
     .title_section{
         
         text-align: center;
@@ -154,7 +165,6 @@ body{
     }
     .frame_content{
         margin-top: 30px;
-        border: 2px solid $second_color;
         height: 60vh;
         .frame_item{
             width: 100%;
@@ -168,9 +178,7 @@ body{
             }
 
             display: block;
-            form{
-        
-            }
+           
             label{
                 color: $second_color;
                 margin-right: 10px;
@@ -211,12 +219,19 @@ body{
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 grid-column-gap: 20px;
-                
                 margin-top: 30px;
+                
+                textarea::placeholder{
+                    font-size: xx-large;
+                    font-weight: 900;
+                    color: $second_color;
+                    text-align: center;
+                }
+
                 .text_item{
-                    min-height: 200px;
-                    border: 1px solid $main_color;
-                    border-radius: 5px;
+                    min-height: 250px;
+                    border: 2px solid $main_color;
+                    border-radius: 10px;
                     background-color: $second_backgound_color;
                 }
 
@@ -235,9 +250,49 @@ body{
                 }
                 #text_after{
                     font-size: small;
+                    width: 100%;
+                    height: 100%;
                 }
             }
 
+        }
+        #relative{
+            position: relative;
+        }
+        .copy{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            transition: .3s;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            z-index: 99;
+            &:hover{
+                opacity: .7;
+            }
+            .svg_icon{
+                width: 100%;
+                height: 100%;
+            }
+            &::after{
+                z-index: 99;
+                content: "copied";
+                display: block;
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                color: $main_color;
+                position: absolute;
+                top: -20px;
+                display: none;
+                opacity: 0;
+                transition: 0.3s;
+
+                left: -40px;
+
+            }
         }
         #decryption_frame{
             background-color: blue;

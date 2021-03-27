@@ -54,24 +54,37 @@
             <div class="frame_content">
                 <div class="frame_item" id="encryption_frame">
 
-                    <div class="container">
-                        <button class="convert_but">encryption now</button>
 
-                        <form>
-                            <label>key number: </label>
-                            <input type="text" placeholder="key">
-                        </form>
+                    <button id="crypt_but" class="convert_but">encryption now</button>
 
-                        <div class="cripto_container">
-                            <div id="text_befor" class="text_item">
-                                <textarea class="text_input" name="text_befor" id="text_befor_input" cols="30"
-                                    rows="10"></textarea>
-                            </div>
-                            <div id="text_after" class="text_item">
-                                <p class="text_input" id="text_after">
-                                    gjgjh
-                                </p>
+                    <form>
+                        <label>key number: </label>
+                        <input type="number" id="key_value" type="text" placeholder="key">
 
+                    </form>
+                    <div class="cripto_container">
+                        <div id="text_before" class="text_item">
+                            <textarea placeholder="Add Text" class="text_input" name="text_before"
+                                id="text_before_input" cols="30" rows="10"></textarea>
+                        </div>
+                        <div id="relative" class="text_item">
+                            <p class="text_input" id="text_after">
+                            </p>
+                            <div id="copy_but" class="copy">
+                                <svg class="svg_icon" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64"
+                                    height="64" viewBox="0 0 172 172" style=" fill:#000000;">
+                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                                        <g fill="#227443">
+                                            <path
+                                                d="M56.4375,1.34375c-2.28438,0 -4.03125,1.74687 -4.03125,4.03125c0,2.28437 1.74687,4.03125 4.03125,4.03125h72.5625c12.63125,0 22.84375,10.2125 22.84375,22.84375v112.875c0,2.28438 1.74687,4.03125 4.03125,4.03125c2.28438,0 4.03125,-1.74687 4.03125,-4.03125v-112.875c0,-17.06562 -13.84062,-30.90625 -30.90625,-30.90625zM34.9375,22.84375c-9.675,0 -17.46875,7.79375 -17.46875,17.46875v112.875c0,9.675 7.79375,17.46875 17.46875,17.46875h86c9.675,0 17.46875,-7.79375 17.46875,-17.46875v-99.4375c0,-8.19687 -3.22395,-15.99167 -9.00208,-21.90417c-5.9125,-5.77813 -13.7073,-9.00208 -21.90417,-9.00208zM111.53125,31.31042c4.56875,0.80625 8.73438,2.9552 12.09375,6.31458c3.35938,3.35938 5.50833,7.525 6.31458,12.09375h-9.00208c-5.24063,0 -9.40625,-4.16562 -9.40625,-9.40625zM48.24115,88.6875h59.125c2.28437,0 4.03125,1.74688 4.03125,4.03125c0,2.28437 -1.74688,4.03125 -4.03125,4.03125h-59.125c-2.28437,0 -4.03125,-1.74688 -4.03125,-4.03125c0,-2.28437 1.74688,-4.03125 4.03125,-4.03125zM48.24115,108.84375h59.125c2.28437,0 4.03125,1.74688 4.03125,4.03125c0,2.28437 -1.74688,4.03125 -4.03125,4.03125h-59.125c-2.28437,0 -4.03125,-1.74688 -4.03125,-4.03125c0,-2.28437 1.74688,-4.03125 4.03125,-4.03125zM48.50885,129h59.125c2.28438,0 4.03125,1.74687 4.03125,4.03125c0,2.28438 -1.74687,4.03125 -4.03125,4.03125h-59.125c-2.28438,0 -4.03125,-1.74687 -4.03125,-4.03125c0,-2.28438 1.74687,-4.03125 4.03125,-4.03125z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
                             </div>
                         </div>
                     </div>
@@ -83,10 +96,7 @@
             </div>
 
 
-            <!-- <div class="key_number">
-                <label class="key_lable">key number: </label>
-                <input class="key_input" type="text" placeholder="key">
-            </div> -->
+
 
 
 
