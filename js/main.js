@@ -44,14 +44,41 @@ let krypt_but = document.getElementById("crypt_but");
 
 let copy_but = document.getElementById("copy_but");
 let krypted_text = document.getElementById("text_after");
+let copied_message = document.querySelector(".copied");
 
 
 function copy_text() {
+    // make the copied effect when click on the button
+    // solve problem of copie a empty text
+    if (krypted_text.textContent == "") {
+        copied_message.textContent = "no text"
+    } else {
+        copied_message.textContent = "copied"
+
+
+    }
+
+    copied_message.style.visibility = "visible";
+
+    copied_message.style.opacity = "1";
+    copied_message.style.transform = "translateY(-5px)";
 
 
 
 
+    setTimeout(function () {
+        copied_message.style.visibility = "hidden";
+        copied_message.style.opacity = "0";
+        copied_message.style.transform = "translateY(0px)";
 
+
+    }, 750)
+    // copied effect
+
+
+
+
+    // copy function 
     // creat the input :
     let input_to_copy = document.createElement("input");
 

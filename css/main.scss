@@ -52,13 +52,32 @@ textarea{
         }
     }
 }
-// for seconf font
+// for second font
 .title_section,.convert_but{
     font-family: 'Righteous', cursive;
         letter-spacing: 2px;
 }
 
 // ###############################
+//  for copied effect
+.copied{
+    z-index: 99;
+    
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    color: $main_color;
+    position: absolute;
+    top: -20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    left: -40px;
+
+}
+// ###############################
+
+
 // ********** nav bar ***************
 #main_nav{
     background-color: $second_backgound_color;
@@ -276,23 +295,7 @@ textarea{
                 width: 100%;
                 height: 100%;
             }
-            &::after{
-                z-index: 99;
-                content: "copied";
-                display: block;
-                width: 100px;
-                height: 30px;
-                text-align: center;
-                color: $main_color;
-                position: absolute;
-                top: -20px;
-                display: none;
-                opacity: 0;
-                transition: 0.3s;
-
-                left: -40px;
-
-            }
+        
         }
         #decryption_frame{
             background-color: blue;
@@ -310,4 +313,5 @@ textarea{
 
 
 }
+
 
